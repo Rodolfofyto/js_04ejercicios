@@ -5,6 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
+    <script>
+        function calcular(){
+            //lee el precio e IVA introducido por el cliente
+            var precio = parseFloat(document.getElementById('precio').value);
+            var iva = parseFloat(document.getElementById('iva').value);
+
+            //Realiza los cálculos 
+            precio*=iva;
+
+            //Mostrar el resultado
+            document.getElementById("resultado").innerHTML = precio.toFixed(2);
+        }
+    </script>
 </head>
 <body>
     <span>Precio:</span><input type="number" min="0" id="precio"/><br/>
