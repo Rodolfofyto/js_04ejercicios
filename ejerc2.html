@@ -14,24 +14,27 @@
             var n3 = parseFloat(document.getElementById('hist').value);
 
             // Calculo promedio
-            var promedio = (n1 + n2 + n3) / 3;
-
-            if (promedio <= 5) {
-                document.getElementById('estado') = suspendido
-            } else {
-                document.getElementById('estado') = aprobado;
-            }
+            var prom = (n1 + n2 + n3) / 3;
 
             // Publico el resultado
-            document.getElementById("promedio").innerHTML = promedio;
+            document.getElementById("promedio").innerHTML = prom.toFixed(1);
+
+            // Condiciones
+            if (prom >= 5) {
+                document.getElementById('estado').innerHTML = "aprobado";
+            } else {
+                document.getElementById('estado').innerHTML = "suspendido";
+            }
         }
+
+
     </script>
 
 </head>
 
 <body>
     <h1>Promedio del Semestre</h1>
-    <p>La universidad de cataluña le faciclita esta aplicación para que puedas conocer el resultado promedio de sus
+    <p>La universidad de cataluña le facilita esta aplicación para que puedas conocer el resultado promedio de sus
         evaluaciones. Para ello debe ingresar sus tres notas finales a continuación.</p>
     <label for="mat">Matemáticas:</label><input type="text" id="mat">
     <label for="lit">Literatura:</label><input type="text" id="lit">

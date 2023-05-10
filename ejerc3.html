@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script>
+        function calcular() {
+            //Recojo los años
+            var año1 = parseFloat(document.getElementById('año1').value);
+            var año2 = parseFloat(document.getElementById('año2').value);
+            // Calcular la diferencia
+            var dif = año1 - año2;
+            //Muestro los datos
+            document.getElementById("dif").innerHTML = dif;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Diferencia entre fechas</h1>
+
+    <label for="">Año 1:</label><input type="text" id="año1" />
+    <label for="">Año 2:</label><input type="text" id="año2" />
+    <br>
+    <br>
+    <button onclick="calcular();">Diferencia</button>
+    <br>
+    <hr>
+    <label for="">La diferencia es de <span id="dif"> </span> años.</label>
+</body>
+
+</html>
