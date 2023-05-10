@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script>
+        function calcular() {
+            // Recojo los datos
+            var n1 = parseFloat(document.getElementById('mat').value);
+            var n2 = parseFloat(document.getElementById('lit').value);
+            var n3 = parseFloat(document.getElementById('hist').value);
+
+            // Calculo promedio
+            var promedio = (n1 + n2 + n3) / 3;
+
+            if (promedio <= 5) {
+                document.getElementById('estado') = suspendido
+            } else {
+                document.getElementById('estado') = aprobado;
+            }
+
+            // Publico el resultado
+            document.getElementById("promedio").innerHTML = promedio;
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Promedio del Semestre</h1>
+    <p>La universidad de cataluña le faciclita esta aplicación para que puedas conocer el resultado promedio de sus
+        evaluaciones. Para ello debe ingresar sus tres notas finales a continuación.</p>
+    <label for="mat">Matemáticas:</label><input type="text" id="mat">
+    <label for="lit">Literatura:</label><input type="text" id="lit">
+    <label for="hist">Historia:</label><input type="text" id="hist">
+    <br>
+    <button onclick="calcular();">Promedio</button>
+    <br>
+    <hr>
+    <p>Su nota promedio del trimestre es de <span id="promedio"> </span> por lo que usted ha <span id="estado"></span>.
+    </p>
+</body>
+
+</html>
