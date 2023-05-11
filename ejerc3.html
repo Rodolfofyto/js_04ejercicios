@@ -12,7 +12,7 @@
             var año1 = parseFloat(document.getElementById('año1').value);
             var año2 = parseFloat(document.getElementById('año2').value);
             // Calcular la diferencia
-            var dif = año1 - año2;
+            var dif = Math.abs(año1 - año2);
             //Muestro los datos
             document.getElementById("dif").innerHTML = dif;
         }
