@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferencia entre fechas</title>
+    <script>
+        function calcularSinDate() {
+            var año1 = document.getElementById("año1").value;
+            var mes1 = document.getElementById("mes1").value;
+            var año2 = document.getElementById("año2").value;
+            var mes2 = document.getElementById("mes2").value;
+
+
+            /* Calcular diferencia de fechas sin usar new Date */
+            var diferenciaAños = año2 - año1;
+            var diferenciaMeses = mes2 - mes1;
+
+            var meses = (diferenciaAños * 12) + diferenciaMeses;
+
+            meses = Math.abs(meses);
+
+            document.getElementById("resultado").innerHTML = meses;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calcular diferencia en meses</h1>
+    <label for="año1">Año 1</label>
+    <input type="number" name="año1" id="año1">
+
+    <label for="mes1">Mes 1</label>
+    <input type="number" name="mes1" id="mes1">
+    <br>
+
+    <label for="año2">Año 2</label>
+    <input type="number" name="año2" id="año2">
+
+    <label for="mes2">Mes 2</label>
+    <input type="number" name="mes2" id="mes2">
+    <br>
+    <button onclick="calcularSinDate()">Calcular</button>
+
+    <hr>
+
+    <p>La diferencia entre las fechas es de <span id="resultado"></span> meses</p>
+</body>
+
+</html>
